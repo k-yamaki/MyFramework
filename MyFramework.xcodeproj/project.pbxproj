@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AED934B9259B2BE9006E8C25 /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED934AF259B2BE8006E8C25 /* MyFramework.framework */; };
 		AED934BE259B2BE9006E8C25 /* MyFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED934BD259B2BE9006E8C25 /* MyFrameworkTests.swift */; };
 		AED934C0259B2BE9006E8C25 /* MyFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = AED934B2259B2BE8006E8C25 /* MyFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AED934CC259B2CDB006E8C25 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED934CB259B2CDB006E8C25 /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 		AED934B8259B2BE9006E8C25 /* MyFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED934BD259B2BE9006E8C25 /* MyFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFrameworkTests.swift; sourceTree = "<group>"; };
 		AED934BF259B2BE9006E8C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AED934CB259B2CDB006E8C25 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AED934B9259B2BE9006E8C25 /* MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +73,7 @@
 			children = (
 				AED934B2259B2BE8006E8C25 /* MyFramework.h */,
 				AED934B3259B2BE8006E8C25 /* Info.plist */,
+				AED934CB259B2CDB006E8C25 /* UserData.swift */,
 			);
 			path = MyFramework;
 			sourceTree = "<group>";
@@ -147,6 +148,7 @@
 				TargetAttributes = {
 					AED934AE259B2BE8006E8C25 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					AED934B7259B2BE9006E8C25 = {
 						CreatedOnToolsVersion = 12.3;
@@ -194,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED934CC259B2CDB006E8C25 /* UserData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -326,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -341,6 +344,8 @@
 		AED934C4259B2BE9006E8C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 23ZV8F4UCV;
@@ -349,6 +354,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MyFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hiroshimamm.keiji.yamaki.MyFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +372,7 @@
 		AED934C5259B2BE9006E8C25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 23ZV8F4UCV;
@@ -373,6 +381,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = MyFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,6 +398,7 @@
 		AED934C7259B2BE9006E8C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23ZV8F4UCV;
 				INFOPLIST_FILE = MyFrameworkTests/Info.plist;
@@ -407,6 +417,7 @@
 		AED934C8259B2BE9006E8C25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 23ZV8F4UCV;
 				INFOPLIST_FILE = MyFrameworkTests/Info.plist;
@@ -432,7 +443,7 @@
 				AED934C2259B2BE9006E8C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		AED934C3259B2BE9006E8C25 /* Build configuration list for PBXNativeTarget "MyFramework" */ = {
 			isa = XCConfigurationList;
@@ -441,7 +452,7 @@
 				AED934C5259B2BE9006E8C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		AED934C6259B2BE9006E8C25 /* Build configuration list for PBXNativeTarget "MyFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -450,7 +461,7 @@
 				AED934C8259B2BE9006E8C25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
